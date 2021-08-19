@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    /* 
+    태그명 : first-letter - 태그 내 요소의 첫번째 글자
+    태그명 : first-line - 요소의 첫번째 줄
+    태그명 : first-child - 같은 요소 중 첫째 요소
+    태그명 : last-child - 같은 요소 중 마지막 요소
+    태그명 : before - 해당 요소가 나오기 직전의 가상요소
+    태그명 : after - 해당 요소가 나온 직후의 가상요소
+    */
+    .box:after{content:"항목을 골라주세요";
+                color: violet;
+                }
+    p:first-letter{font-size: 300%;}
+    p{border-bottom:1px dashed black}
+    p:last-child {border: none;}
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div class="box">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERIVCE</p>
+    </div>
+
+</body>
+</html>

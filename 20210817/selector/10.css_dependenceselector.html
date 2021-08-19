@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    /*
+    타입 선택자와아이디#, 클리스. 가 결합 된 형태
+    */
+    p.more a{ color:red; }
+    /* p태그이면서 클래스가 more인 경우 선택
+    p태그와 바로 붙어있지 않아도 p태그 내부에있는 a면 전부 선택해준다.*/
+</style>
+<meta charset="UTF-8">
+<title>
+</title>
+</head>
+<body>
+        <ul class = "more">
+            <li><a href="#">202호 - css강의</a></li>
+            <li><a href="#">203호 - 프로젝트 진행</a></li>
+            <li><a href="#">204호 - html로 프로그래밍 하기</a></li>
+        </ul>
+        <p class="more"><span><a href="#">더보기</a></span></p>
+    </body>
+</html>
