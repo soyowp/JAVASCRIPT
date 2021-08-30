@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+    //DOM LEVEL 2 방식에서는 한 번에 2개 이상의 이벤트를 연결 가능
+    // 이 방식은 꼭 필요하지는 않지만 여러 브라우저 지원을 위해
+    // 이벤트시 if~else문을 사용
+    // 문법)
+    // if(window.addEventListener){
+    // 이벤트 등록 코드;
+    // } else if (window.attachEvent){
+    // 이벤트 등록 코드;
+    // }
+
+    //표준 브라우저 등록
+    //이벤트대상.addEventListener("이벤트", "함수", false);
+    
+    //비표준 브라우저 등록
+    //이벤트대상.attachEvent("on이벤트명", 함수명);
+
+    function theFnc(){
+        alert("작동되는 경고창");
+    }
+    
+    function clickBtn1() {
+        var myBtn1 = document.getElementById("btn1");
+        myBtn1.onclick = theFnc;
+    }
+
+    function clickBtn2() {
+        var myBtn2 = document.getElementById("btn2");
+        myBtn2.onclick = theFnc;
+    }
+
+    if(window.addEventListener) {//신형브라우저
+        window.addEventListener("load", clickBtn1, false);
+        window.addEventListener("load", clickBtn2, false);
+    }
+
+    else if(window.attachEvent){//구형브라우저
+        window.attachEvent("onload",clickBtn1);
+        window.attachEvent("onload",clickBtn2);    
+    }
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+<body>
+</body>
+
+</html>

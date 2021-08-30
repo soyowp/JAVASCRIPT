@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    
+</style>
+<script>
+    //자바스크립트도 문자열 다루기가 가능하다.
+    //보편적 생성법
+    var str1 = new String("자바스크립트");
+
+    //간소화 생성법
+    var str2 = "자바스크립트"; //ghrdms '자바스크립트'
+
+    //실제활용
+    var text = "javascript is good";
+    document.write(text.bold()+"<br/>");//볼드
+    document.write(text.link("https://naver.com")+"<br/>");//링크
+    document.write(text.length+"<br/>");//문자길이
+    document.write(
+                text.toLocaleLowerCase()+"<br/>");//소문자
+    document.write(
+                text.toUpperCase()+"<br/>");//대문자
+    documnet.write(
+            text.indexOf("i")+"<br/>");//시작부터
+    document.write(
+            text.lastIndexOf("i")+"<br/>");//마지막부터
+    document.write(text.charAt(5) +"<br/>");//5번째 문자
+    document.write(text.substring(4, 6)+"<br/>");//범위지정조회
+    document.write(text.substr(10,3)+"<br/>");//10번부터 3글자
+    document.write(text.replace("good","great")+"<br/>");//good을 great로 찾아바꾸기
+    document.write(text.concat("...")+"<br/>")//문장뒤에 ... 추가
+    document.write(text.split(" ")+"<br/>")//" "기준으로 쪼개기
+
+
+    
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

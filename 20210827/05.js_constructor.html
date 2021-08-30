@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+    //자바스크립트에서도 클래스를 사용할 수 있고
+    //클래스 키워드도 쓸 수 있지만 원시적인 형태는
+    // 함수를 이용해 클래스를 만드는 것이었습니다.
+    // 그래서 우선 함수를 이용해 클래스를 구성하는 것부터 살펴보겠습니다.
+    //문법)
+    //function 클래스명(자료 1,2,...){
+    //     this.변수1 = 자료1;
+    //     this.변수2 = 자료2;
+    //     this.변수3 = 자료3;
+    //
+    //      this.함수명1 = function(){
+    //     실행문;
+    // }
+
+    function computer(cpuInfo,ramInfo,ssdInfo){
+        this.cpu = cpuInfo;
+        this.ram = ramInfo;
+        this.ssd = ssdInfo;
+
+        this.totInfo = function(){
+            document.write("제조업체 : AMD"+ "<br/>")
+            document.write("시스템 : 64bit"+ "<br/>")
+        }
+    }
+
+    var myCom = new computer("AMD", "32GB", "1TB");
+    document.write(myCom.cpu + "<br/>");
+    document.write(myCom.ram + "<br/>");
+    document.write(myCom.ssd + "<br/>");
+
+    myCom.totInfo;
+
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

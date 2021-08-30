@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //자바스크립트에서는 다양한 방식으로 이벤트를 통제 가능합니다.
+    //아래 이벤트 함수들은 자주 쓰는것은 아니지만 한번 정리해보겠습니다.
+
+    // onload = 문서 완전 로드시 이벤트
+    // onunload = 문서 종료시 이벤트
+    // ondbclick = 해당요소 더블클릭시 발생
+    // onclick = 클릭시 발생
+    // onkeypress = 해당 키를 눌렀을시 발생
+    // onkeydown = 해당 키가 눌러졌을때 발생(위와 거의 동일)
+    // onkeyup = 해당 키를 누른 상태에서 뗄 때 발생
+    // onmouseover = 마우스가 올려지면 발생
+    // onfocus = (탭키등으로) 해당 요소를 타겟했을시 발생
+    // onblur = onfocus상태에서 벗어나면 발생
+    // onmouseout = 마우스가 바깥으로 나가면 발생
+    // onsubmit = 전송버튼 누르면 발생
+    // onreset = 취소버튼을 누르면 발생
+    // onchange = 입력요소 값이 변경되면 발생
+    // onmousemove = 마우스를 움직을 때 마다 발생
+    // onresize = 브라우저 창 크기 변경시 발생
+    // onerror = 문서 이미지 부르기 도중 에러 발생시
+    // onabort = 문서 이미지 불러오다 중단시
+
+    // var h1Tag = document.getElementsByClassName("noData") ;
+    // console.log(h1Tag);
+
+    //코드 로딩 후에 데이터를 얻도록 처리
+    window.onload = function(){
+        var h1Tag = document.getElementsByClassName("noData");
+        console.log(h1Tag);
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

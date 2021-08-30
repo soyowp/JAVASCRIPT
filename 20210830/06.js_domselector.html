@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //원거리 선택자
+    //태그에 지정한 id를 이용해 특정 태그만 선택할 수 있는 선택자입니다
+    //선택 대상.getElementById("아이디명");
+
+    //문서 로딩이 끝난 다음에 호출하도록
+    //window.onload 내부에 작성하겠습니다
+    window.onload = function(){
+        var myObj = document.getElementById("title");
+        console.log(myObj);
+        myObj.style.color = "blue";
+        console.log(myObj);
+        
+        var myList = document.getElementsByTagName("ul");
+        console.log(myList[0]);
+        
+        myLi = myList[0].getElementsByTagName("li");
+        console.log(myLi);
+        
+        for(var i=0; i < myLi.length; i++) {
+            myLi[i].style.border = "solid 1px blue"
+        }
+
+        for(var i=0; i< myList.length; i++){
+               var myLi2 = myList[1].getElementsByTagName("li");
+               for(var i=0; i<myLi2.length; i++) {
+                   if((i+1)%2 ===0){
+                       myLi2[i].style.border="solid 1px green";
+                   }   else{
+                       myLi2[i].style.border="solid 1px yellow";
+                   }
+               }
+
+            }
+}
+        
+    </script>
+    <meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+        <div>
+            <h1>선택자</h1>
+            <h2 id="title">원거리선택자</h2>
+            <ul>
+                <li>getElementById</li>
+                <li>getElementsByTagName</li>
+            </ul>
+            <h2>근거리선택자</h2>
+            <ul id="list">
+                <li>parentNode</li>
+                <li>childNodes</li>
+                <li>children</li>
+                <li>firstChild</li>
+                <li>previousSibling</li>
+                <li>nextSibling</li>
+            </ul>
+        </div>
+</body>
+</html>

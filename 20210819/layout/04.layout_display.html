@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    /*
+    display는 박스태그를 블록태그로 만들어주거나
+    블록태그를 박스태그로 만들어주거나 혹은
+    아예 박스 자체를 화면에 보이지 않게(코드상으로 존재) 만들어주는 역할을 한다.
+    display:block; - 박스르 블록속성으로 전환(줄바꿈)
+    display:inline; - 박스를 인라인으로 전환(가로나열)
+    display:inline-block;  - 박스를 인라인요소로 만들지만
+    블록요소에서 쓸 수 있는 옵션(width, height,padding등)
+    을 쓸 수 있도록 허용.
+    display:none; - 해당 요소는 화면에서 표시 안함.
+    */
+    *{margin:0; padding:0;}
+    li{list-style-type: none;}
+    body{font:12px "굴림",Gulim; margin:20px;}
+    #gnb li {display: inline;}
+    #gnb li a {display: inline-block; background:#c00;
+                color:#fff; width:100px; height:23px;
+                padding-top10px; text-align:center;}
+    #gnb li a:hover {background:#369;}
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+        <div id="container">
+            <h1>주 메뉴</h1>
+            <ul id="gnb">
+                    <li><a href="#">COMPANY</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </div>
+</body>
+</html>

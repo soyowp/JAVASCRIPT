@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    /*기본적으로 레이아웃 작업을 할 때는
+    header, body, footer 세 부분으로 분할을 합니다.
+    header, footer는 그냥 한 부분으로 둬도 상관 없지만
+    요즘 사용하는 레이아웃은
+    body쪽을 2~3분할 하기 때문에
+    이 점을 감안해서 float속성을 적절히 사용해주시고
+    float 해제까지 해 주셔야 원하는 모양대로 사이트 구성이 됨에 유의해주세요.*/
+    *{margin:0; padding:0;}
+    body{width: 550px;}
+    #header{border:2px dotted red;
+            height: 100px;}
+    #body{border:2px solid blue;
+            height: 280px;
+            }
+    #body>div{display:inline-block}
+    #sidebar{border:1px solid black;
+            width:200px; height: 280px;
+            float: left;}
+    #contents{border:1px solid black;
+            width:330px; height: 280px;
+            float: right;}
+    #footer{border:2px dashed green;
+            height: 100px;
+            clear:both;}
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="header">
+        헤더가 들어갈 자리
+    </div>
+    
+    
+    <div id="body">
+        <div id="sidebar">
+            사이드바
+        </div>
+        <div id="contents">
+            컨텐츠
+        </div>
+    </div>
+
+    <div id="footer">
+        푸터가 들어갈 자리
+    </div>
+</body>
+</html>

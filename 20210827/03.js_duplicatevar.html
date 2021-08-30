@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        //전역변수와 지역변수는 같은 변수명으로 존재할 수 있으나
+        //호출은 별개로 진행
+        //변수명을 전역/지역별로 중복으로 쓰는 것은 권장되지 않지만
+        //혹시 불바피하게 사용하는경우 구분을 잘 해야 한다.
+
+        var i = 10; // 전역변수 i
+        var num = 20; // 전역변수 num
+
+        function theTest() {
+            var num = i + 200;
+            alert(num);
+        }
+        theTest(); //지역 생성 후 소멸
+
+        function theFnc() {
+            document.write(num);
+        }
+        theFnc(); //지역 생성 후 소멸
+
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

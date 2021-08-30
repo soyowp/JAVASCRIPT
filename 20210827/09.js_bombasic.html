@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // BOM(Browser Object Model)은 브라우저 창에 포함된 모든 요소들을 의미합니다.
+    // 브라우저 객체의 종류에 대해 먼저 확인해보겠습니다.
+
+    // window - 브라우저 전체를 의미. 브라우저 컨트롤용.
+    // document - 브라우저 내부 코드를 의미.
+    // navigator - 브라우저 정보만 따로 제공
+    // location - 브라우저의 url에 대한 정보 제공
+    // screen - 모니터에 대한 정보 제공
+    // history - 방문기록에 대한 정보 제공
+
+    // 아래 요소들은 window.요소명으로 호출 가능하지만 window.생략 가능
+    // open("경로","창이름", "옵션은")// 새 창 열기
+    // alert("문자") 경고창
+    //prompt("질문", 기본값) 사용자 입력
+    // confirm("질문") 확인 취소
+    // setTimeout(함수, 정수) 정수 초 이후 함수 1번 실행
+    // setInterval(함수, 정수) 정수 초마다 함수 실행
+
+    window.open("09-1.js_popup.html",
+                "width=300px , height=400px",
+                "left=200px, top=20px, scrollbars=no, toolbar=no, location=no");
+    // window.open에 들어가는 옵션 종류
+    // width - 새 창의 가로 너비
+    // height - 새 창의 높이
+    // left - 차이 열리는 위치, 왼쪽에서 얼마나 떨어뜨릴지
+    // top - 창이 열리는 위치, 위에서 얼마나 떨어뜨릴지
+    // scrollbars - 스크롤바 생성 여부(yes, no)
+    // menubar - 메뉴바 생성 여부
+    // toolbar - 툴바생성여부
+    // location - 주소표시줄 생성여부
+    // status - 상태표시줄 생성여부
+    // resizeable - 창 사이즈 조절 여부
+
+    
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <h1>팝업테스트</h1>
+
+
+</body>
+</html>

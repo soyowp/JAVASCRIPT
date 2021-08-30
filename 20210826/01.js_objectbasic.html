@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    
+    //자바스크립트도 자바차럼 new키워드를 이용해 클래스 생성이 가능하다
+    //역시 JS에서의 클래스의 목적도 변수와 함수를 같은 소속으로 담아 사용하기 위함이며
+    //마치 자바의 java.utill.* 과 같이 미리 만들어져 있는 내장클래스 사용도 가능하다
+
+    //내장클래스로 대표적인 예시는 document가 있고 이 외에도 Date, Array, Math등 자바와 유사한 여러종류의 객체가 있다
+
+    //날짜 관련 객체 Date 활용
+    document.write("<h1>현재 날짜/시간 정보<h1>");
+    
+    var today = new Date;
+
+    var nowYear = today.getFullYear();    
+    var nowMonth = today.getMonth() + 1 ;
+    var nowDate = today.getDate();
+    var nowday = today.getDay();
+    var nowHours = today.getHours();
+    var nowMinutes = today.getMinutes();    
+    var nowSecond = today.getSecond();    
+    var nowTime = today.getTime();
+    
+    document.write("년" + nowYear + "<br/>");
+    document.write("월" + nowMonth + "<br/>");
+    document.write("일" + nowDate + "<br/>");
+
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

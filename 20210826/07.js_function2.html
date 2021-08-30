@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    var num = 0;
+
+    function nextPic(){
+        num++;
+        if(num>2){ num = 0;}
+        document.getElementById("pic").src = "img/img" + num + ".jpg"
+        //id가 pic인 요소(그림)의 src속성을 1증가된 num을 이용해 바꿔줌
+        return false;
+        //변경 후 링크 이동 막기
+    }
+
+    function prevPic(){
+        num--;
+        if(num<0){num = 2;}
+        document.getElementById("pic").src = "img/img" + num +".jpg"
+        return false;
+    }
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+    <h1>이미지 넘기기</h1>
+    <a href="#" onclick="return prevPic()">  prev &lt &lt </a> &nbsp;
+    <a href="#" onclick="return nextPic()"> &gt &gt next </a>
+    <br/>
+    <img width="500px" src = "img/img0.jpg" id="pic">
+
+</body>
+</html>
