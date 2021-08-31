@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //#h1space내부에 클릭할때마다
+    //h1태그(넣고싶은 단어를 아무거나 넣어주세요)가 생성됩니다
+    //로직을 작성해주세요
+
+    window.onload = function () {
+    var ch1 = document.getElementById("inch1");
+    var h1space = document.getElementById('h1space');
+    
+    ch1.onclick = function(){
+        
+        var newH1 = document.createElement('h1');
+
+        var text = document.createTextNode("증식하는 h1");
+
+        newH1.appendChild(text);
+
+        h1space.appendChild(newH1);
+        
+        }
+        
+    }
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id= h1space></div>
+    <button id = inch1>h1증식</button>
+</body>
+</html>

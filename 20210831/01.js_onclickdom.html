@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+    </style>
+    <script>
+        // DOM 내부 요소를 고치는 작업을 해보겠습니다.
+        // DOM조작과 onclick 이벤트를 같이 조합해서
+        // 사용자가 특정 요소를 클릭했을때 DOM 조작이
+        // 일어나도록 하는것이 일반적입니다.
+        // DOM 조작이라는 용어는 그냥 html코드에 변화를 주는
+        // 작업이라고 생각하셔도 무방합니다.
+
+        // 모든 문서 로딩이 끝난 뒤 스크립트 실행
+        window.onload = function () {
+            var number = document.getElementById('number');
+            var incbtn = document.getElementById('increase');
+            var decbtn = document.getElementById('decrease');
+
+            console.log(number);
+            // 특정 태그의 부모요소는 parentNode를 통해
+            // 얻어올 수 있습니다.
+            console.log(incbtn.parentNode.parentNode);
+            console.log(decbtn.parentNode.parentNode);
+
+            // div를 변수에 저장하고 콘솔에 찍어주세요.
+            // 1. 태그이름으로 얻어오기.
+            var divTag = document.getElementsByTagName("div")[0];
+            // getElementsByTagName으로 얻어오는 경우
+            // htmlCollection이라는 리스트로 얻어와짐
+            // 따라서 인덱싱을 통해 마지막까지 지정해야함.
+            console.log(divTag);
+
+            // 2. childNodes로 자식태그들 얻어오기.
+            // 단, 자식태그에는 html문서상 개행을 위해
+            // 친 엔터키까지 text로 잡혀나오므로 주의.
+            console.log(divTag.childNodes);
+
+            // 3. children 으로 자식태그 얻어오기.
+            // children은 개행문자등은 생략하고
+            // 태그요소만 가져오는 특성을 가지고 있습니다.
+            console.log(divTag.children);
+
+            // 4. 일일이 인덱싱으로 가져오기 복잡한 경우
+            // 첫 번째나 마지막 요소 등은 근접선택자에서
+            // 따로 선택할 수 있는 옵션을 제공합니다.d
+            // firstChild - 첫 자식태그
+            // lastChild - 마지막 자식태그
+            console.log(divTag.firstChild);
+
+            // 5. previousSibling, nextSibling을 통해
+            // 형제 태그간 순번을 하나씩 뒤로 넘기거나
+            // 하나씩 앞으로 가져올 수 있습니다.
+            // #reset을 잡아서 변수에 저장해주시고
+            // 위 두 명령어를 이용해 increase와
+            // decrease를 콘솔에 찍어보세요.
+            var resetBtn = document.getElementById("reset");
+
+            console.log(resetBtn.nextElementSibling);
+            console.log(resetBtn.previousElementSibling);
+
+            //이제 이벤트를 자바스크립트로 붙여서
+            //버튼 클릭시 숫자가 변하도록 해보겠습니다.
+            //#number, #reset, #increase, #decrease를 변수에 담아주세요
+
+            var numBtn = document.getElementById("number");
+            var resetBtn = document.getElementById("reset");
+            var incBtn = document.getElementById("increase");
+            var decBtn = document.getElementById("decrease");
+
+            //increase버튼 클릭시 숫자 증가
+            increase.onclick = function () {
+                var current = parseInt(number.innerText, 10);
+                //태그 내부 숫자에 1을 더해 다시 내부 텍스트에 갱신시켜준다
+                number.innerText = current + 1;
+            }
+
+            //reset, decrease 버튼에도 이벤트를 적절하게 걸어주세요.
+            decrease.onclick = function () {
+                var current = parseInt(number.innerText, 10);
+                number.innerText = current - 1;
+            }
+
+            reset.onclick = function () {
+                var current = parseInt(number.innerText, 10);
+                number.innerText = 0;
+            }
+
+            var redBtn = document.getElementById("red");
+            var blueBtn = document.getElementById("blue");
+            var greenBtn = document.getElementById("green");
+
+            redBtn.onclick = function () {
+                numBtn.style.color = "red";
+            }
+            blueBtn.onclick = function () {
+                numBtn.style.color = "blue";
+            }
+            greenBtn.onclick = function () {
+                numBtn.style.color = "green";
+            }
+
+        }
+
+
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <h2 id="number">0</h2>
+    <div>
+        <button id="increase">+1</button>
+        <button id="reset">0</button>
+        <button id="decrease">-1</button>
+        <br>
+        <button id="red">빨간색</button>
+        <button id="blue">파란색</button>
+        <button id="green">초록색</button>
+    </div>
+</body>
+
+</html>
