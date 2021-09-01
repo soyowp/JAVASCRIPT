@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+    //문서 객체 조작 메서드
+    //element내용르 바꾸거나 생성하거나 끼워넣거나
+    //하는 일련의 과정을 수행합니다.
+
+    //메서드 종류
+    //$("선택자").html() - 선택요소의 하위요소 얻기
+    //$("선택자").html("새요소") - 선택요소 하위요소 변경
+    //$("선택자").text("텍스트") - 선택요소 내부텍스트 변경
+    //$("새요소") - createElement처럼 새 태그 생성
+    //$("선택자").append(새요소) - 선택요소에 새요소 끼우기
+    //$("선택자").prepend(새요소) - 선택요소에 새요소 끼우기
+    //$("선택자").appendTo(새요소) - 선택요소에 새요소 끼우기
+    //$("선택자").insertBefore(새요소) - 선택요소의 형제요소 추가
+    //$("선택자").insertAfter(새요소) - 선택요소의 형제요소 추가
+    //$("선택자").clone(true/false) - 요소복사(하위요소 복사여부)
+    //$("선택자").remove() - 선택요소 삭제
+    //$("선택자").empty() - 하위요소 전부삭제
+    //$("선택자").attr("속성") - 특정속성(class, id등) 지정
+    //$("선택자").attr("속성","값") - 속성값 갱신
+    //$("선택자").addClass("클래스명") - 새로운 클래스명 부여
+    //$("선택자").removeClass("클래스명") - 클래스 속성 해제
+    //$("선택자").toggleClass("클래스명") - 클래스명이 없으면 추가 있으면 삭제
+    //$("선택자").hasClass("클래스명") - 선택요소에 클래스명 부여합니다
+    //$(선택요소).wrap("<div></div>") - 선택요소를 감싸는 요소 생성
+    //$(선택요소).wrapAll("<div></div>") - 선택요소를 감싸는 요소 생성
+    
+    //제이쿼리르 활용한 문서조작
+    
+    //익명함수(function키워드를 써서 만들며 함수명을 적지 않은 함수)는 =>로 대체 가능
+    //애로우펑션이라고 부르며 ES6에서 신규 추가되었다.
+    $(()=>{
+    //1.class="theTitle"인 요소의 하위 요소를
+    //"<a href='#'>요소 객체 조작</a>"로 바꿉니다.
+    $(".theTitle").html("<a href='#'>요소객체조작</a>");
+    
+    //2.class="obj1"인 요소의 텍스트를 "리스트_2"로 바꿉니다.
+    $(".obj1").html("리스트_2");
+    
+    //3.id=list3인요소 뒤에 새요소를 추가합니다
+    //"<li>list_6</li>"
+    $("#list3").append("<li>list_6</li>");
+    
+    //$("#list3").append("")
+
+    //4. id=list3인 요소의 0번 인덱스에 새 요소를 추가합니다
+    //"<li>list_1</li>"
+    $("#list3").prepend("<li>list_1</li>");
+
+    //5. id=list3인 5번째 li요소 이전에 새 요소를 아래와 같이 추가합니다.
+    //"<li>insertBefore</li>"
+    //insertBefore랑 eq를 쓰세요
+    $("<li>insertBefore</li>").insertBefore($("#list3 li").eq(4));
+
+    //6. id=list3인 6번째(5) li요소 이후에 새 요소를 아래와 같이 추가합니다
+    //"<li>insertAfter</li>"
+    $("<li>insertAfter</li>").insertAfter($("#list3 li").eq(5))
+
+    //7. class=obj1인 요소 복제 후 id가 list3인 요소의 가장 마지막 위치에 추가해주세요
+    //.clone()수행에 변수에 저장하시고 저장된 요소는 appendTO를 이용해주세요
+    var obj1cn = $(".obj1").clone(true);
+
+    //8. id=list3인 요소의 하위 li중 첫번째 요소의 클래스 속성에
+    //무슨 값이 있는지 콘솔에 찍어보기(.attr()사용)
+    console.log($("#list3 li").eq(1).attr("class"));
+
+    //9. id=list3인 요소의 하위 li중 2번째(1) 요소의 클래스 속성값을 obj2로 바꿔주시고,
+    // .obj2에 대해서 배경색을 노란색으로 바꿔주세요.
+    $("#list3 li").eq(1).attr("class", "obj2");
+    $(".obj2").css("background-color","yellow");
+
+    //10 id=list3인 요소의 하위 li중 1번째(0) 요소의
+    //클래스 속성에 obj3을 추가합니다.
+    //.addClass() 를 이용해주세요.
+    //그다음.obj3을 선택해서 글씨색을 빨간색으로 바꿔주세요
+
+    $("#list3 li").eq(0).addClass("obj3");
+    $(".obj3").css("color","red")
+
+    });
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="wrap">
+        <h2 class="theTitle">HTML조작</h2>
+        <ul id="list3">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+    </div>
+</body>
+</html>

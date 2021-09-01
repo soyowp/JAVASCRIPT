@@ -34,8 +34,29 @@
             //.obj4의 next의 색깔을 orange로 바꿔주쇼에
             // next는 바닐라js의 nextSibling처럼 사용합니다.
             $(".obj4").next().css("color","orange");
-        
-        });
+
+            //.obj5의 prev의 정렬을 우측정렬로 해주세요
+            // prev는 바닐라js의 preSibling처럼 사용됩니다.
+            $(".obj5").prev().css("text-align","right");
+
+            // .obj6의 형제인 "li" 전체에게 가운데 정렬
+            // .siblings("li")를 하면 형제 중 li만 모두 선택
+            $(".obj6").siblings("li").css("text-align","center");
+
+            //이렇게 선택자로 얻어온 결과는
+            //변수에도 저장이 됩니다.
+            var obj6 = $(".obj6");
+            console.log(obj6);
+
+            //html문서 내부의 폼 요소를 선택할 때는
+            //$(":타입명")으로 타입에 따라 선택이 가능합니다.
+            //text, password, checkbox, radio등이 있습니다.
+            // text타입 input의 배경색을 노란색으로
+            // 경계는 1픽셀 solid 검은색으로, 글씨색은 파란색으로 바꿔주세요
+            $(":text").css({"border":"1px solid",
+                            "color":"blue",
+                            "background-color":"yellow"});
+        })
     </script>
     <meta charset="UTF-8">
     <title></title>
