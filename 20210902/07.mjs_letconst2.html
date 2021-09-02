@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        //var 선언한 변수는 자신이 속한 지역까지 영역이다.
+        //그러나 함수 외부에서 선언한 변수는
+        //함수 내부에서 재선언을 해도 전역변수로 간주된다
+        var x = 1;
+
+        if (true) {
+            var x = 10;
+        }
+        console.log(x);
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

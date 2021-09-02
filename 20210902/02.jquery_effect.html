@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/1.5 "굴림", Gulim;
+            margin: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        //이벤트를 통해 특정한 조건을 만족할떄
+        //태그를 자유 자재로 조작 할 수 있게 되지만
+        //단순하게 조작만 되다보니 효과가 부족해서
+        //뭔가 밋밋하다는 느낌을 받기 쉽습니다.
+        //따라서, 효과까지 주어서 이벤트 실행시
+        //좀더 심미적인 화면 구성을 제공합니다.
+
+        //$("선택자").hide() - 선택요소 숨기기
+        //$("선택자").show() - 선택요소 보이기
+        //$("선택자").toggle() - 보이면 숨기고, 안보이면 노출
+        //$("선택자").slideUp() - 말아올라가듯 숨김
+        //$("선택자").slideDown() - 말아내리듯 노출
+        //$("선택자").slideToggle() - slide형태로 toggle적용
+        //$("선택자").fadeOut() - 서서히 사라짐
+        //$("선택자").fadeIn() - 서서히 나타남
+        //$("선택자").fadeTo() - 요소를 원하는만큼 투명화함
+
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                $(".box1").show("fast");
+            });
+            $("#btn2").click(function () {
+                $(".box1").hide("fast");
+            });
+
+
+            $("#btn3").click(function () {
+                $(".box2").toggle("fast");
+            });
+
+            $("#btn4").click(function () {
+                $(this).parent().next().slideUp(500);
+
+            });
+            $("#btn5").click(function () {
+                $(this).parent().next().slideDown(500);
+            });
+            $("#btn6").click(function () {
+                $(this).parent().next().slideToggle(500);
+            });
+
+            $("#btn7").click(function () {
+                $(this).parent().next().fadeOut(1000);
+            });
+            $("#btn8").click(function () {
+                $(this).parent().next().fadeIn(1000);
+            });
+            $("#btn9").click(function () {
+                $(this).parent().next().fadeToggle(1000);
+            });
+            $("#btn10").click(function () {
+                $(this).parent().next().fadeTo(500, 0.1);
+            });
+
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>제이쿼리 Effect</h1>
+        <p>제이쿼리에서는
+            다양한 효과 메서드를 제공합니다.
+            <br />
+        </p>
+        <h2>show/hide효과</h2>
+        <p><button id="btn1">show</button></p>
+        <p><button id="btn2">hide</button></p>
+        <p class="box1">
+            선택요소를 숨기거나 노출킬때 씁니다<br />
+            hide(시간)/show(시간)<br>
+            시간은 fast, normal,등으로 입력하거나 밀리초 단위의 시간을 입력합니다
+        </p>
+
+        <h2>toggle 효과</h2>
+        <p><button id="btn3">toggle</button></p>
+        <p class="box2">
+            선택요소가 숨겨져있다면 보이게,
+            <br />
+            보인다면 숨기게 만들어줍니다
+            <h2>slideUp/Down효과</h2>
+            <p><button id="btn4">slideUp</button>
+                <button id="btn5">slideDown</button>
+                <button id="btn6">slideToggle</button>
+            </p>
+            <p class="box3">
+                슬라이드 하듯이 노출시켜줍니다
+                <br />
+                슬라이드 위쪽과 아래쪽
+
+                <h2>fadeIn/fadeOut</h2>
+                <p>
+                    <button id="btn7">fadeOut</button>
+                    <button id="btn8">fadeIn</button>
+                    <button id="btn9">fadeToggle</button>
+                </p>
+                <p class="box4">
+                    fadeOut은 선택 요소를 천천히 사라지게 합니다<br />
+                    fadeIn은 천천히 노출되게 합니다.
+                </p>
+
+                <h2>fadeTo</h2>
+                <p>
+                    <button id="btn10">fadeTo</button>
+                    <p class="box5">
+                        fadeTo는 선택 요소를 원하는 만큼만<br />
+                        보이거나 숨길 수 있습니다.
+                    </p>
+                </p>
+    </div>
+
+
+
+</body>
+
+</html>

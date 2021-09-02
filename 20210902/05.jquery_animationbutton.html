@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box2 {
+            width: 50px;
+            height: 50px;
+            background-color: #ff0;
+            position: relative;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            $("#right").click(function () {
+
+                $("#box2").animate({
+                    left: "+=100px",
+                }, 500)
+
+            });
+
+            $("#left").click(function () {
+
+                $("#box2").animate({
+                    left: "-=100px",
+                }, 500)
+            });
+            $("#top").click(function () {
+
+                $("#box2").animate({
+                    top: "-=100px",
+                }, 500)
+            });
+            $("#bottom").click(function () {
+
+                $("#box2").animate({
+                    top: "+=100px",
+                }, 500)
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <p>
+        <div id="box2">박스2</div>
+    </p>
+    <p>
+
+        <button id="left">left</button>
+        <button id="top">top</button><br />&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="bottom">bottom</button>
+        <button id="right">right</button>
+
+
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        //디스트럭쳐링 할당(구조분해 할당)은 배열 내부의 자료를
+        //하나하나 쪼개서 변수에 대입하는 것
+        //배열로 된 자룔르 빠르게 분해할 때 유용
+
+        //es5문법
+        let arr = [1, 2, 3, ];
+        //위 arr의 1,2,3,을 하나하나 변수에 담으려면
+        let one = arr[0];
+        let two = arr[1];
+        let three = arr[2];
+        console.log(one, two, three);
+
+        //es6문법
+        const arr2 = [4, 5, 6];
+        console.log(...arr2);
+        const [four, five, six] = arr2;
+        console.log(four, five, six);
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

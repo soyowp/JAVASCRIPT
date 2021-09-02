@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        //var키워드로 선언한 변수는 전역 변수와 지역변수의 경계가 모호하기 때문에
+        //여러 문제를 이야기 했지만 let키워드는 개별 지역으로 인식하기에 문제가 없다
+
+        let foo = 1; {
+            let foo = 2;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

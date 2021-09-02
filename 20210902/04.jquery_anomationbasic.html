@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            position: relative;
+        }
+    </style>
+    <script>
+        // 선택요소를 움직이거나 크기를 변형하기위해
+        // 애니메이션을 사용합니다.
+        // 요소의 위치를 실시간으로 변경하거나
+        // 움직이는 작업이 가능합니다.
+
+        var func1 = $(document).ready(function () {
+            $("#box1").animate({
+                left: "500px",
+                width: "200px",
+                height: "200px",
+            }, 2000).animate({
+                left: "0px",
+                width: "100px",
+                height: "100px",
+            }, 2000)
+
+
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="box1"> 가즈아 </div>
+</body>
+
+</html>

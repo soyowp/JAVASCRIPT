@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/lodash/lodash/4.17.15-npm/lodash.min.js"></script>
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //선언 및 초기화
+            $(".menuList").hide();
+            var check = true;
+            //if($("#menu")[0].innerText==="메뉴보기")로 사용가능
+            //메인펑션
+            $("#menu").on('click', function () {
+                if (check) {
+                    check = !check;
+                    $("#menu").text("메뉴닫기");
+                    $(".menuList").show(500);
+
+
+                } else if (!check) {
+                    check = !check;
+                    $("#menu").text("메뉴보기");
+                    $(".menuList").hide(500);
+
+
+                }
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="menu">메뉴보기</div>
+    <ul class="menuList">
+        <li>직화버거</li>
+        <li>치즈버거</li>
+        <li>소고기버거</li>
+        <li>치킨버거</li>
+        <li>버거버거</li>
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        var i = 10;
+        // for문 내부에 선언한 변수도 전역변수로
+        // 강제로 변환됩니다.
+        for (var i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        console.log(i); //10이어야 하는데 5가 나옴
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

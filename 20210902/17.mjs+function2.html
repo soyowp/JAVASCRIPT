@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        // 화살표 함수
+        // 화살표 함수는 function키워드 대신 => 사용하여
+        //간략하게 함수를 정의한다
+        // 화살표 함수는 표현만 간략한 것이 아니라 내부동작도
+        // 기존 함수보다 간략한데, this등의 키워드를 배제해서 더욱 그렇다.
+
+        //화살표 함수는 이름 부여가 불가능하고 오로지 변수에 넣어서 사용한다. (익명함수 선언시만)
+
+        //multiply 변수에 xy두개를 받아 곱해서 리턴
+        const multiply = (x, y) => x * y;
+
+        let result = multiply(2, 3);
+        console.log(result);
+
+        //1. 파마미터가 여럿인 경우는 소괄호 안에 나 후 화살표 중괄호 여닫고 작성
+        // (파라미터1, 파라미터2...) => {실행구문};
+        const plus = (x, y) => {
+            return x + y;
+        }
+        result = plus(5, 19);
+        console.log(result);
+
+        //매개변수가 하나만 있다면 소괄호는 생략 가능.
+        const minus = x => {
+            return x - 10;
+        }
+        result = minus(5);
+        console.log(result);
+
+        //매개변수가 없다면 소괄호 생략 불가
+        //() => {실행구문}
+        const hello = () => {
+            return "hello";
+        }
+        result = hello();
+        console.log(result);
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

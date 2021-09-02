@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        //es5까지 변수를 선언할 때는 오로지 var만을 사용해 선언했지만
+        //var키워드는 변수 중복이 가능하기때문에
+        //함수레벨 스코프의 중복처리가 가능하고 변수 호이스팅 등의 문제가 초래됩니다.
+
+        //1. 변수 중복 허용 문제
+        var x = 1;
+        var y = 1;
+
+        //x가 이미 선언되어있어도 다시 선언이 가능한 중복선언이 됩니다.
+        var x = 100;
+        //초기화를 하지 않으면 중복선언문은 작동하지 않습니다.
+        var y;
+        console.log(x);
+        console.log(y);
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>
