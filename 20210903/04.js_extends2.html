@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+
+    </style>
+    <script>
+        //Person과 상속한 요소를 2개 만들어서 활용
+
+        //Person은 이름과 나이를 가진다.
+        //나머지 요소들은각자 자기 자신의 멤버 변수 하나와
+        //자기 자신만 할 수 있는 메서드를 하나씩 가진다
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        Person.prototype.setName = function (name) {
+            this.name = name;
+
+        }
+
+        Person.prototype.getName = function () {
+            return this.name;
+        }
+
+        Person.prototype.setAge = function (age) {
+            this.age = age;
+        }
+        Person.prototype.getAge = function () {
+            return this.age;
+        }
+
+        // 상속1 run추가
+        function Human(name, age, run) {
+            this.run = run;
+        }
+        //Person을 Human의 프로토타입에 객체 생성해 상속을 흉내
+        let you = new Person("따라쟁이", 10);
+
+        Human.prototype = you;
+
+        //추가적인 기능 get set
+        Human.prototype.setRun = function (run) {
+            this.run = run;
+        }
+        Human.prototype.getRun = function () {
+            return this.run;
+        }
+
+        let human1 = new Human("김휴먼");
+        human1.setName("고길동");
+        human1.setAge(20);
+        human1.setRun("달리자!");
+        console.log(human1.getName());
+        console.log(human1.getAge());
+        console.log(human1.getRun());
+
+        //상속2 sleep추가
+        function Human2(name, age, sleep) {
+            this.sleep = sleep;
+        }
+
+        let me = new Person("따라쟁이2", 20);
+
+        Human2.prototype = me;
+
+        Human2.prototype.setSleep = function (sleep) {
+            this.sleep = sleep;
+        }
+
+        Human2.prototype.getSleep = function () {
+            return this.sleep;
+        }
+
+        let human2 = new Human2("박휴먼")
+        human2.setName("도우너");
+        human2.setAge(10);
+        human2.setSleep("깐따삐야!");
+        console.log(human2.getName());
+        console.log(human2.getAge());
+        console.log(human2.getName());
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

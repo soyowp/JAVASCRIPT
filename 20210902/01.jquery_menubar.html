@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<style>
+    <style>
 
-</style>
-<script>
-    // 화면 중간에 "메뉴" 라고 적힌 요소를 하나 만들고
-    // 마우스를 올리면 음식 메뉴가 보이고
-    // 메뉴의 갯ㅅ는 5개 마우스를 메뉴라고 적힌 요소에서 치우면 보이지 않게 만들기
-    $(document).ready(function(){
-        $("#menu").show();
-        $("#list").hide();
-        $("#menu").hover(function(){
-            $(this).css("background-color","gray");
-            $("#menu").hide(500);
-            $("#list").show(500);
-        });
-        $("#list").mouseleave(function(){
-            $(this).css("background-color","white");
-            $("#menu").show(500);
-            $("#list").hide(500);
+    </style>
+    <script>
+        // 화면 중간에 "메뉴" 라고 적힌 요소를 하나 만들고
+        // 마우스를 올리면 음식 메뉴가 보이고
+        // 메뉴의 갯수는 5개 마우스를 메뉴라고 적힌 요소에서 치우면 보이지 않게 만들어줍니다
+
+
+        $(document).ready(function () {
+            $("#menu").show();
+
+            $("#list").hide();
+
+            $("#menu").hover(function () {
+
+                $(this).css("background-color", "gray");
+                $("#menu").hide(500);
+                $("#list").show(500);
+            });
+            $("#list").mouseleave(function () {
+                $(this).css("background-color", "white");
+                $("#menu").show(500);
+                $("#list").hide(500);
+            })
+
         })
-
-    })
-</script>
-<meta charset="UTF-8">
-<title></title>
+    </script>
+    <meta charset="UTF-8">
+    <title></title>
 </head>
+
 <body>
     <h1 id="menu">메뉴판</h1>
-        <ul id="list">
-            <li>햄버거:3000</li>
-            <li>피자:15000</li>
-            <li>돈까스:8000</li>
-            <li>순두부:5000</li>
-            <li>라면:2000</li>
-        </ul>
+    <ul id="list">
+        <li>햄버거:3000</li>
+        <li>피자:15000</li>
+        <li>돈까스:8000</li>
+        <li>순두부:5000</li>
+        <li>라면:2000</li>
+    </ul>
 </body>
+
 </html>
